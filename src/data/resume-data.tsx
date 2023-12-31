@@ -68,7 +68,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "Current",
       description:
-        "Work directly on the core Subscriber team, building complex pipelines to handle multiple data sources from different platforms, such as Disney+, Hulu, ESPN. Built a vendor-agnostic config driven ETL Framework in Python, leveraging industry-leading tools such as PySpark, Snowpark, Pydantic, etc. Quickly became the Subject Matter Expert in Developer Operations, modernizing how the entire data org implements CI/CD",
+        "Work on the core Subscriber team, building complex pipelines to handle multiple data sources from different platforms, such as Disney+, Hulu, ESPN. Built a vendor-agnostic config driven ETL Framework in Python, leveraging industry-leading tools such as PySpark, Snowpark, Pydantic, etc. Quickly became the Subject Matter Expert in Developer Operations, modernizing how the entire data org implements CI/CD",
     },
     {
       company: "Progressive Insurance",
