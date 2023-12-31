@@ -24,11 +24,11 @@ export const RESUME_DATA = {
   initials: "BS",
   location: "Venice, CA",
   locationLink: "https://www.google.com/maps/place/Venice,CA",
-  about: "Full Stack Engineer with a focus on big data.",
+  about: "Full Stack Engineer",
   summary:
-    "Seasoned engineer skilled in Python, adept at automating complex processes with a proven track record in designing and building robust data pipelines. Proactive problem solver, continuously seeking to optimize. Interested in distributed systems, cloud architecture, and developer operations. Passionate about fostering a positive company culture and maintaining a healthy work-life balance.",
-  avatarUrl: "https://your-avatar-url.com", // Replace with your avatar URL
-  personalWebsiteUrl: "https://bensack.io",
+    "Seasoned developer skilled in Python, adept at automating complex processes with a proven track record in designing and building robust data pipelines. Proactive problem solver, continuously seeking to optimize. Interested in distributed systems, cloud architecture, and developer operations. Passionate about fostering a positive company culture and maintaining a healthy work-life balance.",
+    avatarUrl: "https://media.licdn.com/dms/image/D5603AQH_PDgueSCEWA/profile-displayphoto-shrink_800_800/0/1689965278426?e=1709769600&v=beta&t=8v6f8rD4t1yYxzFsXH1hLdMyUB6Hve1bKaEmS4raHbE", 
+    personalWebsiteUrl: "https://bensack.io",
   contact: {
     email: "contact@bensack.io",
     tel: "310-498-0030",
@@ -40,7 +40,7 @@ export const RESUME_DATA = {
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bensack",
+        url: "https://www.linkedin.com/in/ben-sack",
         icon: LinkedInIcon,
       },
       {
@@ -63,7 +63,7 @@ export const RESUME_DATA = {
     {
       company: "Disney Streaming",
       link: "https://disneyplus.com",
-      badges: [],
+      badges: ["Hybrid"],
       title: "Senior Data Engineer",
       start: "2022",
       end: "Current",
@@ -73,8 +73,8 @@ export const RESUME_DATA = {
     {
       company: "Progressive Insurance",
       link: "https://progressive.com",
-      badges: [],
-      title: "Senior Data Platform Engineer",
+      badges: ["Remote"],
+      title: "Data Engineer → Senior Data Engineer",
       start: "2020",
       end: "2022",
       description:
@@ -84,7 +84,7 @@ export const RESUME_DATA = {
       company: "Progressive Insurance",
       link: "https://progressive.com",
       badges: [],
-      title: "Systems Engineer",
+      title: "Associate Systems Engineer → Systems Engineer",
       start: "2018",
       end: "2020",
       description:
@@ -94,175 +94,81 @@ export const RESUME_DATA = {
   skills: [
     "Python",
     "SQL",
-    "CI/CD",
+    "Spark",
     "Snowflake",
     "AWS",
+    "Airflow",
     "Databricks",
     "Docker",
-    "Airflow",
-    "Spark",
+    "Kubernetes",
     "Kafka",
+    "Terraform",
+    "Jenkins",
+    "Git",
+    "Javascript",
+    "HTML",
+    "CSS"
   ],
   projects: [
     {
-      title: "Consultly",
+      title: "Fig",
       techStack: [
-        "Side Project",
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
+        "Python",
+        "Pydantic",
+        "Pyspark",
+        "Snowpark",
+        "Databricks",
       ],
-      description: "A platform to build and grow your online business",
       logo: ConsultlyLogo,
+      description: "Internal [Disney] framework to structure and deploy data pipelines",
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "Disney",
+        href: "https://disneystreaming.com/",
       },
     },
     {
-      title: "Monito",
-      techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
+      title: "Bristol Studios",
+      techStack: ["Consulting", "Liquid", "Javascript", "Shopify"],
       description:
-        "Browser extension that records everything happening in a web application",
+        "Luxury athlesure brand with a primary focus on Basketball",
       logo: MonitoLogo,
       link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
+        label: "bristol-studio.com",
+        href: "https:/bristol-studio.com/",
       },
     },
     {
-      title: "Jarocki.me",
-      techStack: ["Side Project", "Next.js", "MDX"],
+      title: "Streets Ahead",
+      techStack: ["Consutling", "Management", "Liquid", "Javascript", "Shopify"],
       description:
-        "My personal website and blog. Built with Next.js and Notion API",
+        "Luxury brand focused on leather goods made in the USA",
       logo: JarockiMeLogo,
       link: {
-        label: "github.com",
-        href: "https://jarocki.me/",
+        label: "streetsaheadinc.com",
+        href: "https://streetsaheadinc.com/",
       },
     },
     {
-      title: "Minimal",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
+      title: "Portfolio",
+      techStack: ["Personal", "Javascript", "React", "FastAPI", "AWS"],
       description:
-        "Minimalist calendars, habit trackers and planners generator",
+        "Full-stack personal website built with learning in mind",
       logo: Minimal,
       link: {
-        label: "useminimal.com",
-        href: "https://useminimal.com/",
+        label: "bensack.io",
+        href: "http://bensack.io/",
       },
     },
     {
-      title: "Barepapers",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
+      title: "Literally Balling",
+      techStack: ["Side Project", "Liquid", "Javascript", "Shopify"],
       description:
-        "Generates beautiful wallpapers using random shapes and gradients",
+        "Luxury basketball brand with focused on custom-made garments and accessories",
       logo: BarepapersLogo,
       link: {
-        label: "barepapers.com",
-        href: "https://barepapers.com/",
+        label: "literallyballing.com",
+        href: "https://literallyballing.com/",
       },
-    },
-    {
-      title: "Year progress",
-      techStack: ["Side Project", "TypeScript", "Next.js"],
-      description: "Tracks current year progress and displays a countdown",
-      logo: YearProgressLogo,
-      link: {
-        label: "getyearprogress.com",
-        href: "https://getyearprogress.com/",
-      },
-    },
-    {
-      title: "Parabol",
-      techStack: [
-        "Full Stack Developer",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
-      ],
-      description:
-        "The Agile meeting co-pilot that delivers better meetings with less effort",
-      logo: ParabolLogo,
-      link: {
-        label: "github.com",
-        href: "https://parabol.co/",
-      },
-    },
-    {
-      title: "Evercast",
-      techStack: [
-        "Lead Frontend Developer",
-
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
-      ],
-      description:
-        "Creative collaboration platform that combines video conferencing and HD media streaming",
-      logo: EvercastLogo,
-      link: {
-        label: "evercast.us",
-        href: "https://www.evercast.us/",
-      },
-    },
-    {
-      title: "Mobile Vikings",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for leading virtual mobile operator in Poland",
-      logo: MobileVikingsLogo,
-      link: {
-        label: "mobilevikings.pl",
-        href: "https://mobilevikings.pl/",
-      },
-    },
-    {
-      title: "Howdy",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Howdy is a place for you to join communities you care about",
-      logo: Howdy,
-      link: {
-        label: "play.google.com",
-        href: "https://howdy.co/",
-      },
-    },
-    {
-      title: "Tastycloud",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for managing and displaying restaurant menus in kiosk mode",
-      logo: TastyCloudLogo,
-      link: {
-        label: "tastycloud.fr",
-        href: "https://www.tastycloud.fr/",
-      },
-    },
-    {
-      title: "Ambit",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with sharing your contact details",
-      logo: AmbitLogo,
-    },
-    {
-      title: "Bim",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with booking a table in a restaurants",
-      logo: BimLogo,
-    },
-    {
-      title: "Canal Digital GO",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Video streaming mobile application for Canal Digital subscribers",
-      logo: CDGOLogo,
     },
   ],
 } as const;
