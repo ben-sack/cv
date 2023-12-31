@@ -26,7 +26,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Venice,CA",
   about: "Full Stack Engineer",
   summary:
-    "Seasoned developer skilled in Python, adept at automating complex processes with a proven track record in designing and building robust data pipelines. Proactive problem solver, continuously seeking to optimize. Interested in distributed systems, cloud architecture, and developer operations. Passionate about fostering a positive company culture and maintaining a healthy work-life balance.",
+    "Seasoned developer skilled in Python, with a proven track record in designing and building robust data pipelines. Proactive problem solver, continuously seeking to optimize. Interested in distributed systems, cloud architecture, and developer operations. Passionate about fostering a positive company culture and maintaining a healthy work-life balance.",
     avatarUrl: "https://media.licdn.com/dms/image/D5603AQH_PDgueSCEWA/profile-displayphoto-shrink_800_800/0/1689965278426?e=1709769600&v=beta&t=8v6f8rD4t1yYxzFsXH1hLdMyUB6Hve1bKaEmS4raHbE", 
     personalWebsiteUrl: "https://bensack.io",
   contact: {
