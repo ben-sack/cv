@@ -1,22 +1,3 @@
-import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
-} from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
@@ -78,7 +59,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Promoted within one year for executing senior to lead level work. Updated old code bases to modern development standards. Collaborated with project managers to select ambitious, but realistic KPIs. Developed automated continuous deployment and integration pipelines to test, lint, and deploy code with 100% coverage. Built end-to-end highly-available infrastructure using Terraform, OpenStack, and AWS.",
+        "Collaborated with project managers to select ambitious, but realistic KPIs. Developed automated continuous deployment and integration pipelines to test, lint, and deploy code with 100% coverage. Built end-to-end highly-available infrastructure using Terraform, OpenStack, and AWS.",
     },
     {
       company: "Progressive Insurance",
@@ -106,8 +87,6 @@ export const RESUME_DATA = {
     "Jenkins",
     "Git",
     "Javascript",
-    "HTML",
-    "CSS"
   ],
   projects: [
     {
@@ -119,7 +98,7 @@ export const RESUME_DATA = {
         "Snowpark",
         "Databricks",
       ],
-      logo: ConsultlyLogo,
+      // logo:,
       description: "Internal [Disney] framework to structure and deploy data pipelines",
       link: {
         label: "Disney",
@@ -131,7 +110,7 @@ export const RESUME_DATA = {
       techStack: ["Consulting", "Liquid", "Javascript", "Shopify"],
       description:
         "Luxury athlesure brand with a primary focus on Basketball",
-      logo: MonitoLogo,
+      // logo:,
       link: {
         label: "bristol-studio.com",
         href: "https:/bristol-studio.com/",
@@ -142,7 +121,7 @@ export const RESUME_DATA = {
       techStack: ["Consutling", "Management", "Liquid", "Javascript", "Shopify"],
       description:
         "Luxury brand focused on leather goods made in the USA",
-      logo: JarockiMeLogo,
+      // logo:,
       link: {
         label: "streetsaheadinc.com",
         href: "https://streetsaheadinc.com/",
@@ -153,7 +132,7 @@ export const RESUME_DATA = {
       techStack: ["Personal", "Javascript", "React", "FastAPI", "AWS"],
       description:
         "Full-stack personal website built with learning in mind",
-      logo: Minimal,
+      // logo:,
       link: {
         label: "bensack.io",
         href: "http://bensack.io/",
@@ -161,10 +140,10 @@ export const RESUME_DATA = {
     },
     {
       title: "Literally Balling",
-      techStack: ["Side Project", "Liquid", "Javascript", "Shopify"],
+      techStack: ["Consulting", "Liquid", "Javascript", "Shopify"],
       description:
         "Luxury basketball brand with focused on custom-made garments and accessories",
-      logo: BarepapersLogo,
+      // logo:,
       link: {
         label: "literallyballing.com",
         href: "https://literallyballing.com/",
