@@ -109,7 +109,7 @@ export const RESUME_DATA = {
       title: "Bristol Studios",
       techStack: ["Consulting", "Liquid", "Javascript", "Shopify"],
       description:
-        "Luxury athlesure brand with a primary focus on Basketball",
+        "Athlesure brand with a primary focus on Basketball",
       // logo:,
       link: {
         label: "bristol-studio.com",
@@ -142,7 +142,7 @@ export const RESUME_DATA = {
       title: "Literally Balling",
       techStack: ["Consulting", "Liquid", "Javascript", "Shopify"],
       description:
-        "Luxury basketball brand with focused on custom-made garments and accessories",
+        "Basketball brand focused on handmade garments and collectibles",
       // logo:,
       link: {
         label: "literallyballing.com",
