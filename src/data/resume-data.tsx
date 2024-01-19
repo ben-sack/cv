@@ -131,7 +131,7 @@ export const RESUME_DATA = {
       title: "Portfolio",
       techStack: ["Personal", "Javascript", "React", "FastAPI", "AWS"],
       description:
-        "Full-stack personal website built with learning in mind",
+        "Personal website",
       // logo:,
       link: {
         label: "bensack.io",
