@@ -7,8 +7,9 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Venice,CA",
   about: "Full Stack Engineer",
   summary:
-    "Seasoned developer focused on big data. Interested in distributed systems, cloud architecture, and developer operations. Passionate about fostering a positive company culture and maintaining a healthy work-life balance.",
-    avatarUrl: "https://media.licdn.com/dms/image/D5603AQH_PDgueSCEWA/profile-displayphoto-shrink_800_800/0/1689965278426?e=1709769600&v=beta&t=8v6f8rD4t1yYxzFsXH1hLdMyUB6Hve1bKaEmS4raHbE", 
+    // "Seasoned developer focused on big data. Interested in distributed systems, cloud architecture, and developer operations. Passionate about fostering a positive company culture and maintaining a healthy work-life balance.",
+    "Just a guy who likes to code.",
+    avatarUrl: "https://i.ibb.co/YBRT0YJ/Screenshot-2024-08-12-at-1-50-43-AM.png", 
     personalWebsiteUrl: "https://bensack.io",
   contact: {
     email: "contact@bensack.io",
@@ -49,8 +50,9 @@ export const RESUME_DATA = {
       start: "2022",
       end: "Current",
       description:
-        "Work on the core Subscriber team, building complex pipelines to handle multiple data sources from different platforms, such as Disney+, Hulu, ESPN. Built a vendor-agnostic config driven ETL Framework in Python, leveraging industry-leading tools such as PySpark, Snowpark, Pydantic, etc. Quickly became the Subject Matter Expert in Developer Operations, modernizing how the entire data org implements CI/CD",
-    },
+        // "Work on the core Subscriber team, building complex pipelines to handle multiple data sources from different platforms, such as Disney+, Hulu, ESPN. Built a vendor-agnostic config driven ETL Framework in Python, leveraging industry-leading tools such as PySpark, Snowpark, Pydantic, etc. Quickly became the Subject Matter Expert in Developer Operations, modernizing how the entire data org implements CI/CD",
+        "Machine Learning Platform –– Build, design, and maintain the services and infrastructure for all ML fueled applications at Disney Streaming, such as recommendations, search, etc."
+      },
     {
       company: "Progressive Insurance",
       link: "https://progressive.com",
@@ -59,7 +61,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Collaborated with project managers to select ambitious, but realistic KPIs. Developed automated continuous deployment and integration pipelines to test, lint, and deploy code with 100% coverage. Built end-to-end highly-available infrastructure using Terraform, OpenStack, and AWS.",
+        "Data Platform –– Lead the migration from on-prem to the cloud. Assisted in designing and implementing the cloud stack currently used for big data at Progressive",
     },
     {
       company: "Progressive Insurance",
@@ -69,7 +71,7 @@ export const RESUME_DATA = {
       start: "2018",
       end: "2020",
       description:
-        "Maintained on-prem and cloud servers, including VMware instances. Diagnosed complex technical issues promptly to minimize downtime and enhance system reliability. Identified opportunities for process improvement, implementing automation solutions to streamline routine tasks and enhance operational efficiency.",
+        "Maintained on-prem and cloud servers. Diagnosed complex technical issues promptly to minimize downtime and enhance system reliability. Identified opportunities for process improvement, implementing automation solutions to streamline routine tasks and enhance operational efficiency.",
     },
   ],
   skills: [
