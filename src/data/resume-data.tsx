@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   summary:
     // "Seasoned developer focused on big data. Interested in distributed systems, cloud architecture, and developer operations. Passionate about fostering a positive company culture and maintaining a healthy work-life balance.",
     "Just a guy who likes to code.",
-    avatarUrl: "https://i.ibb.co/F7GS9Pd/taco.jpg", 
+    avatarUrl: "https://i.ibb.co/YBRT0YJ/Screenshot-2024-08-12-at-1-50-43-AM.png", 
     personalWebsiteUrl: "https://bensack.io",
   contact: {
     email: "contact@bensack.io",
