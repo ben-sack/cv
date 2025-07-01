@@ -43,12 +43,22 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "Databricks",
+      link: "https://databricks.com",
+      badges: ["Remote"],
+      title: "Specialist Solutions Architect",
+      start: "2025",
+      end: "Current",
+      description:
+        "Data engineering specialist supporting the F-500 manufacturing vertical. Solving complex data problems at scale. SME in structured streaming and distributed processing."
+      },
+    {
       company: "Disney Streaming",
       link: "https://disneyplus.com",
       badges: ["Hybrid"],
       title: "Senior Data Engineer",
       start: "2022",
-      end: "Current",
+      end: "2025",
       description:
         // "Work on the core Subscriber team, building complex pipelines to handle multiple data sources from different platforms, such as Disney+, Hulu, ESPN. Built a vendor-agnostic config driven ETL Framework in Python, leveraging industry-leading tools such as PySpark, Snowpark, Pydantic, etc. Quickly became the Subject Matter Expert in Developer Operations, modernizing how the entire data org implements CI/CD",
         "Machine Learning Platform –– Build, design, and maintain the services and infrastructure for all ML fueled applications at Disney Streaming, such as recommendations, search, etc."
@@ -61,7 +71,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Data Platform –– Lead the migration from on-prem to the cloud. Assisted in designing and implementing the cloud stack currently used for big data at Progressive",
+        "Data Platform –– Lead the migration from on-prem to the cloud. Assisted in designing and implementing the cloud stack currently used for big data at Progressive.",
     },
     {
       company: "Progressive Insurance",
