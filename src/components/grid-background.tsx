@@ -134,7 +134,7 @@ export function GridBackground() {
     <canvas
       ref={canvasRef}
       className="pointer-events-none fixed inset-0 print:hidden"
-      style={{ zIndex: -1 }}
+      style={{ zIndex: 0 }}
     />
   );
 }
