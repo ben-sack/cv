@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import { GridBackground } from "@/components/grid-background";
+import { AnimatedInitials } from "@/components/animated-initials";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -19,9 +20,10 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <GridBackground />
-      <section className="relative z-10 mx-auto w-full max-w-2xl space-y-8 bg-white/90 print:bg-white print:space-y-6">
+      <section className="relative z-10 mx-auto w-full max-w-2xl space-y-8 print:bg-white print:space-y-6">
         <div className="flex items-center justify-between">
-          <div className="flex-1 space-y-1.5">
+          <div className="space-y-1.5">
+
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
               {RESUME_DATA.about}
@@ -88,11 +90,7 @@ export default function Page() {
               ) : null}
             </div>
           </div>
-
-          <Avatar className="h-28 w-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar>
+          <AnimatedInitials />
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 const GRID       = 44;
-const NODE_COUNT = 18;
+const NODE_COUNT = 8;
 const DOT_R      = 2.5;
 const GLOW_R     = 8;
 const SPEED_MIN  = 0.003;
@@ -23,22 +23,24 @@ export function GridBackground() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    const ctx = canvas.getContext("2d")!;
 
     const dpr = window.devicePixelRatio || 1;
     let w = 0, h = 0, cols = 0, rows = 0, raf = 0;
     const nodes: GridNode[] = [];
+
+    // Capture as non-null so TypeScript doesn't complain inside closures
+    const el: HTMLCanvasElement = canvas;
 
     function resize() {
       w = window.innerWidth;
       h = window.innerHeight;
       cols = Math.ceil(w / GRID);
       rows = Math.ceil(h / GRID);
-      canvas.width  = w * dpr;
-      canvas.height = h * dpr;
-      canvas.style.width  = `${w}px`;
-      canvas.style.height = `${h}px`;
+      el.width  = w * dpr;
+      el.height = h * dpr;
+      el.style.width  = `${w}px`;
+      el.style.height = `${h}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
@@ -100,8 +102,8 @@ export function GridBackground() {
 
         // Soft glow
         const grd = ctx.createRadialGradient(px, py, 0, px, py, GLOW_R);
-        grd.addColorStop(0, `rgba(14,165,233,${n.opacity * 0.6})`);
-        grd.addColorStop(1, `rgba(14,165,233,0)`);
+        grd.addColorStop(0, `rgba(80,80,80,${n.opacity * 0.6})`);
+        grd.addColorStop(1, `rgba(80,80,80,0)`);
         ctx.beginPath();
         ctx.arc(px, py, GLOW_R, 0, Math.PI * 2);
         ctx.fillStyle = grd;
@@ -110,7 +112,7 @@ export function GridBackground() {
         // Core dot
         ctx.beginPath();
         ctx.arc(px, py, DOT_R, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(14,165,233,${n.opacity})`;
+        ctx.fillStyle = `rgba(80,80,80,${n.opacity})`;
         ctx.fill();
       }
 
