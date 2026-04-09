@@ -7,7 +7,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Venice,CA",
   about: "Specialist Solutions Architect",
   summary:
-    "Data engineer turned solutions architect. I spend most of my time thinking about streaming data, ML infrastructure, and how to make complex systems less complex — with the occasional Shopify store on the side.",
+    "Data engineer. I spend half my time thinking about big data, and half my time thinking about how to make complex systems less complex — with the occasional Shopify store on the side.",
     avatarUrl: "https://i.ibb.co/PGL9VN3R/ppic.jpg",
     personalWebsiteUrl: "https://bensack.io",
   contact: {
