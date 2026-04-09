@@ -2,11 +2,13 @@
 
 import { useEffect, useRef } from "react";
 
-const GRID      = 44;
-const DOT_R     = 2.5;
-const GLOW_R    = 8;
-const SPEED_MIN = 0.003;
-const SPEED_MAX = 0.008;
+const GRID          = 44;
+const DOT_R         = 2.5;
+const GLOW_R        = 8;
+const SPEED_MIN     = 0.003;
+const SPEED_MAX     = 0.008;
+const LINK_DIST     = 200; // px — nodes closer than this draw a connection
+const LINK_ALPHA    = 0.35; // max opacity of connection line
 
 const PALETTE = [
   [100, 116, 139], // slate blue
@@ -81,7 +83,8 @@ export function GridBackground() {
       ctx.clearRect(0, 0, w, h);
 
       // Grid lines
-      ctx.strokeStyle = "rgba(0,0,0,0.05)";
+      const isDark = document.documentElement.classList.contains("dark");
+      ctx.strokeStyle = isDark ? "rgba(255,255,255,0.07)" : "rgba(0,0,0,0.05)";
       ctx.lineWidth = 1;
       for (let x = 0; x <= cols; x++) {
         ctx.beginPath();
@@ -96,8 +99,8 @@ export function GridBackground() {
         ctx.stroke();
       }
 
-      // Moving nodes
-      for (const n of nodes) {
+      // Advance nodes and collect pixel positions
+      const pos: [number, number][] = nodes.map(n => {
         n.p += n.speed;
         if (n.p >= 1) {
           n.gx = n.tx; n.gy = n.ty;
@@ -105,10 +108,39 @@ export function GridBackground() {
           const next = pickNext(n);
           n.tx = next.tx; n.ty = next.ty;
         }
+        return [
+          (n.gx + (n.tx - n.gx) * n.p) * GRID,
+          (n.gy + (n.ty - n.gy) * n.p) * GRID,
+        ];
+      });
 
-        const px = (n.gx + (n.tx - n.gx) * n.p) * GRID;
-        const py = (n.gy + (n.ty - n.gy) * n.p) * GRID;
+      // Connections — drawn beneath nodes, fade in/out with proximity
+      ctx.lineWidth = 0.8;
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const [ax, ay] = pos[i];
+          const [bx, by] = pos[j];
+          const dist = Math.hypot(bx - ax, by - ay);
+          if (dist >= LINK_DIST) continue;
 
+          const alpha = (1 - dist / LINK_DIST) * LINK_ALPHA;
+          const [r1, g1, b1] = nodes[i].rgb;
+          const [r2, g2, b2] = nodes[j].rgb;
+          const grad = ctx.createLinearGradient(ax, ay, bx, by);
+          grad.addColorStop(0, `rgba(${r1},${g1},${b1},${alpha})`);
+          grad.addColorStop(1, `rgba(${r2},${g2},${b2},${alpha})`);
+          ctx.beginPath();
+          ctx.moveTo(ax, ay);
+          ctx.lineTo(bx, by);
+          ctx.strokeStyle = grad;
+          ctx.stroke();
+        }
+      }
+
+      // Nodes — drawn on top of connections
+      for (let i = 0; i < nodes.length; i++) {
+        const n = nodes[i];
+        const [px, py] = pos[i];
         const [r, g, b] = n.rgb;
 
         // Soft glow

@@ -10,6 +10,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import { GridBackground } from "@/components/grid-background";
 import { AnimatedInitials } from "@/components/animated-initials";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -39,6 +40,7 @@ export default function Page() {
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+              <ThemeToggle />
               {RESUME_DATA.contact.email ? (
                 <Button
                   className="h-8 w-8"

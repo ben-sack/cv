@@ -36,13 +36,13 @@
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
+    --background: 222 47% 11%;
     --foreground: 210 20% 98%;
 
-    --card: 224 71.4% 4.1%;
+    --card: 222 47% 11%;
     --card-foreground: 210 20% 98%;
 
-    --popover: 224 71.4% 4.1%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 20% 98%;
 
     --primary: 210 20% 98%;
@@ -69,6 +69,9 @@
 @layer base {
   * {
     @apply border-border;
+  }
+  html {
+    background: hsl(var(--background));
   }
   body {
     @apply text-foreground;
