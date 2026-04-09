@@ -5,10 +5,9 @@ export const RESUME_DATA = {
   initials: "BS",
   location: "Venice, CA",
   locationLink: "https://www.google.com/maps/place/Venice,CA",
-  about: "Full Stack Engineer",
+  about: "Specialist Solutions Architect",
   summary:
-    // "Seasoned developer focused on big data. Interested in distributed systems, cloud architecture, and developer operations. Passionate about fostering a positive company culture and maintaining a healthy work-life balance.",
-    "Just a guy who likes to code.",
+    "Data engineer turned solutions architect. I spend most of my time thinking about streaming data, ML infrastructure, and how to make complex systems less complex — with the occasional Shopify store on the side.",
     avatarUrl: "https://i.ibb.co/PGL9VN3R/ppic.jpg",
     personalWebsiteUrl: "https://bensack.io",
   contact: {
@@ -50,19 +49,28 @@ export const RESUME_DATA = {
       start: "2025",
       end: "Current",
       description:
-        "Data engineering specialist supporting the F-500 manufacturing vertical. Solving complex data problems at scale. SME in structured streaming and distributed processing."
+        "Specialist supporting Fortune 500 manufacturers in the MFG vertical. I get called in for the complex stuff — structured streaming architectures, DevOps pipelines, and unblocking production workloads on the Databricks Lakehouse."
       },
+    {
+      company: "Disney Streaming",
+      link: "https://disneyplus.com",
+      badges: ["Hybrid"],
+      title: "Senior ML Platform Engineer",
+      start: "2024",
+      end: "2025",
+      description:
+        "ML Platform team — helped build the backend recommendation system and real-time feature store powering the Hulu on Disney+ integration. Also the org's go-to SME for the in-house feature store.",
+    },
     {
       company: "Disney Streaming",
       link: "https://disneyplus.com",
       badges: ["Hybrid"],
       title: "Senior Data Engineer",
       start: "2022",
-      end: "2025",
+      end: "2024",
       description:
-        // "Work on the core Subscriber team, building complex pipelines to handle multiple data sources from different platforms, such as Disney+, Hulu, ESPN. Built a vendor-agnostic config driven ETL Framework in Python, leveraging industry-leading tools such as PySpark, Snowpark, Pydantic, etc. Quickly became the Subject Matter Expert in Developer Operations, modernizing how the entire data org implements CI/CD",
-        "Machine Learning Platform –– Build, design, and maintain the services and infrastructure for all ML fueled applications at Disney Streaming, such as recommendations, search, etc."
-      },
+        "Core Subscriber Data Solutions team — built the pipelines behind subscriber metrics and trend reporting across Disney+, Hulu, and ESPN. Designed an internal config-driven ETL framework (Fig) adopted across the data org, and became the team's go-to for CI/CD.",
+    },
     {
       company: "Progressive Insurance",
       link: "https://progressive.com",
@@ -88,17 +96,19 @@ export const RESUME_DATA = {
     "Python",
     "SQL",
     "Spark",
+    "Structured Streaming",
     "Snowflake",
     "AWS",
-    "Airflow",
     "Databricks",
-    "Docker",
-    "Kubernetes",
+    "Airflow",
+    "MLflow",
+    "Feature Stores",
     "Kafka",
+    "Docker",
     "Terraform",
-    "Jenkins",
-    "Git",
+    "CI/CD",
     "Javascript",
+    "Go",
   ],
   projects: [
     {
@@ -130,7 +140,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Streets Ahead",
-      techStack: ["Consutling", "Management", "Liquid", "Javascript", "Shopify"],
+      techStack: ["Consulting", "Management", "Liquid", "Javascript", "Shopify"],
       description:
         "Luxury brand focused on leather goods made in the USA",
       // logo:,
