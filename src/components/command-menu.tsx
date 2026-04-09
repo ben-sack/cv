@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-
 import {
   CommandDialog,
   CommandEmpty,
@@ -26,24 +25,36 @@ export const CommandMenu = ({ links }: Props) => {
         setOpen((open) => !open);
       }
     };
-
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
+
   return (
     <>
-      <p className="fixed bottom-0 left-0 right-0 border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden">
-        Press{" "}
-        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">⌘</span>J
-        </kbd>{" "}
-        to open the command menu
-      </p>
+      <button
+        onClick={() => setOpen(true)}
+        className="fixed bottom-0 left-0 right-0 w-full border-t border-t-muted bg-white p-1.5 text-center text-sm text-muted-foreground print:hidden transition-colors hover:bg-muted/50"
+      >
+        <span className="hidden sm:inline">
+          Press{" "}
+          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+            <span className="text-xs">⌘</span>J
+          </kbd>{" "}
+          to open the command menu
+        </span>
+        <span className="sm:hidden">Tap to open command menu</span>
+      </button>
+
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
+
           <CommandGroup heading="Actions">
             <CommandItem
               onSelect={() => {
@@ -51,9 +62,29 @@ export const CommandMenu = ({ links }: Props) => {
                 window.print();
               }}
             >
-              <span>Print</span>
+              <span>Print Resume</span>
             </CommandItem>
           </CommandGroup>
+
+          <CommandSeparator />
+
+          <CommandGroup heading="Navigate">
+            <CommandItem onSelect={() => scrollTo("work")}>
+              <span>Work Experience</span>
+            </CommandItem>
+            <CommandItem onSelect={() => scrollTo("education")}>
+              <span>Education</span>
+            </CommandItem>
+            <CommandItem onSelect={() => scrollTo("skills")}>
+              <span>Skills</span>
+            </CommandItem>
+            <CommandItem onSelect={() => scrollTo("projects")}>
+              <span>Projects</span>
+            </CommandItem>
+          </CommandGroup>
+
+          <CommandSeparator />
+
           <CommandGroup heading="Links">
             {links.map(({ url, title }) => (
               <CommandItem
@@ -67,7 +98,6 @@ export const CommandMenu = ({ links }: Props) => {
               </CommandItem>
             ))}
           </CommandGroup>
-          <CommandSeparator />
         </CommandList>
       </CommandDialog>
     </>
