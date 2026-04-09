@@ -2,12 +2,18 @@
 
 import { useEffect, useRef } from "react";
 
-const GRID       = 44;
-const NODE_COUNT = 8;
-const DOT_R      = 2.5;
-const GLOW_R     = 8;
-const SPEED_MIN  = 0.003;
-const SPEED_MAX  = 0.008;
+const GRID      = 44;
+const DOT_R     = 2.5;
+const GLOW_R    = 8;
+const SPEED_MIN = 0.003;
+const SPEED_MAX = 0.008;
+
+const PALETTE = [
+  [100, 116, 139], // slate blue
+  [99,  102, 241], // indigo
+  [20,  184, 166], // teal
+  [249, 115,  22], // warm orange
+] as const;
 
 interface GridNode {
   gx: number; gy: number; // current grid cell
@@ -15,6 +21,7 @@ interface GridNode {
   p: number;              // progress 0 → 1
   speed: number;
   opacity: number;
+  rgb: readonly [number, number, number];
 }
 
 export function GridBackground() {
@@ -56,7 +63,8 @@ export function GridBackground() {
 
     function initNodes() {
       nodes.length = 0;
-      for (let i = 0; i < NODE_COUNT; i++) {
+      const count = window.innerWidth < 640 ? 4 : 8;
+      for (let i = 0; i < count; i++) {
         const gx = Math.floor(Math.random() * (cols + 1));
         const gy = Math.floor(Math.random() * (rows + 1));
         nodes.push({
@@ -64,6 +72,7 @@ export function GridBackground() {
           p:       Math.random(),
           speed:   SPEED_MIN + Math.random() * (SPEED_MAX - SPEED_MIN),
           opacity: 0.25 + Math.random() * 0.45,
+          rgb:     PALETTE[Math.floor(Math.random() * PALETTE.length)],
         });
       }
     }
@@ -100,10 +109,12 @@ export function GridBackground() {
         const px = (n.gx + (n.tx - n.gx) * n.p) * GRID;
         const py = (n.gy + (n.ty - n.gy) * n.p) * GRID;
 
+        const [r, g, b] = n.rgb;
+
         // Soft glow
         const grd = ctx.createRadialGradient(px, py, 0, px, py, GLOW_R);
-        grd.addColorStop(0, `rgba(80,80,80,${n.opacity * 0.6})`);
-        grd.addColorStop(1, `rgba(80,80,80,0)`);
+        grd.addColorStop(0, `rgba(${r},${g},${b},${n.opacity * 0.6})`);
+        grd.addColorStop(1, `rgba(${r},${g},${b},0)`);
         ctx.beginPath();
         ctx.arc(px, py, GLOW_R, 0, Math.PI * 2);
         ctx.fillStyle = grd;
@@ -112,7 +123,7 @@ export function GridBackground() {
         // Core dot
         ctx.beginPath();
         ctx.arc(px, py, DOT_R, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(80,80,80,${n.opacity})`;
+        ctx.fillStyle = `rgba(${r},${g},${b},${n.opacity})`;
         ctx.fill();
       }
 
