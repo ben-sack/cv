@@ -5,9 +5,9 @@ export const RESUME_DATA = {
   initials: "BS",
   location: "Venice, CA",
   locationLink: "https://www.google.com/maps/place/Venice,CA",
-  about: "Specialist Solutions Architect",
+  about: "Data/Platform Engineer",
   summary:
-    "Data engineer. I spend half my time thinking about big data, and half my time thinking about how to make complex systems less complex — with the occasional Shopify store on the side.",
+    "Engineer focused on building reliable systems and making complex things easier to run.",
     avatarUrl: "https://i.ibb.co/PGL9VN3R/ppic.jpg",
     personalWebsiteUrl: "https://bensack.io",
   contact: {
@@ -59,7 +59,7 @@ export const RESUME_DATA = {
       start: "2024",
       end: "2025",
       description:
-        "ML Platform team — helped build the backend recommendation system and real-time feature store powering the Hulu on Disney+ integration. Also the org's go-to SME for the in-house feature store.",
+        "Built parts of the recommendation backend and real-time feature store behind the Hulu on Disney+ launch. I was also the go-to person for our in-house feature store.",
     },
     {
       company: "Disney Streaming",
@@ -69,7 +69,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2024",
       description:
-        "Core Subscriber Data Solutions team — built the pipelines behind subscriber metrics and trend reporting across Disney+, Hulu, and ESPN. Designed an internal config-driven ETL framework (Fig) adopted across the data org, and became the team's go-to for CI/CD.",
+        "Built pipelines for subscriber metrics and trend reporting across Disney+, Hulu, and ESPN. I also created a config-driven ETL framework (Fig) used across the org and became the team's CI/CD go-to.",
     },
     {
       company: "Progressive Insurance",
@@ -79,7 +79,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Data Platform –– Lead the migration from on-prem to the cloud. Assisted in designing and implementing the cloud stack currently used for big data at Progressive.",
+        "Led a big part of our move from on-prem to cloud and helped design the big data stack still used at Progressive.",
     },
     {
       company: "Progressive Insurance",
@@ -89,7 +89,7 @@ export const RESUME_DATA = {
       start: "2018",
       end: "2020",
       description:
-        "Maintained on-prem and cloud servers. Diagnosed complex technical issues promptly to minimize downtime and enhance system reliability. Identified opportunities for process improvement, implementing automation solutions to streamline routine tasks and enhance operational efficiency.",
+        "Managed both on-prem and cloud servers, troubleshot outages quickly, and automated repetitive work to keep systems more reliable.",
     },
   ],
   skills: [
