@@ -49,7 +49,7 @@ export const RESUME_DATA = {
       start: "2025",
       end: "Current",
       description:
-        "Specialist supporting Fortune 500 manufacturers in the MFG vertical. I get called in for the complex stuff — structured streaming architectures, DevOps pipelines, and unblocking production workloads on the Databricks Lakehouse."
+        "Support Fortune 500 manufacturers on Databricks, with a focus on streaming architecture, DevOps pipelines, and stabilizing production workloads."
       },
     {
       company: "Disney Streaming",
@@ -59,7 +59,7 @@ export const RESUME_DATA = {
       start: "2024",
       end: "2025",
       description:
-        "Built parts of the recommendation backend and real-time feature store behind the Hulu on Disney+ launch. I was also the go-to person for our in-house feature store.",
+        "Built parts of the recommendation backend and real-time feature store for the Hulu on Disney+ integration, and served as a subject matter expert for the in-house feature store.",
     },
     {
       company: "Disney Streaming",
@@ -69,7 +69,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2024",
       description:
-        "Built pipelines for subscriber metrics and trend reporting across Disney+, Hulu, and ESPN. I also created a config-driven ETL framework (Fig) used across the org and became the team's CI/CD go-to.",
+        "Built pipelines for subscriber metrics and trend reporting across Disney+, Hulu, and ESPN. Designed Fig, a config-driven ETL framework adopted across the data organization, and led CI/CD practices for the team.",
     },
     {
       company: "Progressive Insurance",
@@ -79,7 +79,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2022",
       description:
-        "Led a big part of our move from on-prem to cloud and helped design the big data stack still used at Progressive.",
+        "Led key parts of Progressive's migration from on-prem to cloud and helped design the big data platform still in use.",
     },
     {
       company: "Progressive Insurance",
@@ -89,7 +89,7 @@ export const RESUME_DATA = {
       start: "2018",
       end: "2020",
       description:
-        "Managed both on-prem and cloud servers, troubleshot outages quickly, and automated repetitive work to keep systems more reliable.",
+        "Managed on-prem and cloud infrastructure, resolved production issues, and automated recurring operational tasks to improve reliability.",
     },
   ],
   skills: [

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Ben Sack",
   description: "Specialist Solutions Architect & Data/ML Engineer",
   icons: {
-    icon: "/favicon.svg",
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.svg",
   },
 };
